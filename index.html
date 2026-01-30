@@ -126,6 +126,11 @@
             text-align: center;
             padding: 40px 24px;
         }
+            .gallery {display: grid;grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));gap: 20px;margin: 40px 0;}
+        .gallery img {width: 100%;height: 220px;object-fit: cover;border-radius: 12px;transition: transform 0.3s;box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .gallery img:hover {transform: translateY(-4px);box-shadow: 0 12px 24px rgba(0,0,0,0.15);}
+        .gallery img:first-child {grid-column: 1 / -1;height: 400px;}
+        @media(max-width:768px){{.gallery img:first-child {{height: 250px}}}}
     </style>
 </head>
 <body>
@@ -152,6 +157,18 @@
         <h3>Family Adventure</h3>
         <p>The grotto is particularly popular with families. Children love the sense of discovery and the storytelling potential. Bring a torch to explore the darker corners, though the cave is safe and stable.</p>
         
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="section">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+            <div class="gallery">
+                <img src="photo-1.jpg" alt="Fairy Grotto" loading="lazy">
+                <img src="photo-2.jpg" alt="Fairy Grotto" loading="lazy">
+                <img src="photo-3.jpg" alt="Fairy Grotto" loading="lazy">
             </div>
         </div>
     </section>
